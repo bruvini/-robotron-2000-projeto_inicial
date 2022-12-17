@@ -41,6 +41,8 @@ controle.forEach((elemento) => {
     })
 })
 
+alert("Configure o zoom da sua página, se necessário!")
+
 function manipulaDados (op, controle) {
     const peca = controle.querySelector('.controle-contador')
     
