@@ -68,7 +68,7 @@ main {
 /****************************** Equipamentos *****/
 
 .equipamentos {
-    flex-basis: 32%;
+    flex-basis: 50%;
 }
 
 .montador {
@@ -100,7 +100,7 @@ main {
 }
 
 .controle-contador {
-    width: 40px;
+    width: 100px;
     height: 35px;
     background: none;
     border: 0;
