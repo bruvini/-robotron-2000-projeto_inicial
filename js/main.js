@@ -1,17 +1,19 @@
-const robotron = document.querySelector('#robotron')
-contadorDeClique = 0
-function reclama() {
-    contadorDeClique++
-    if (contadorDeClique <= 3) {
-        console.log('O Robotron foi clicado ' + contadorDeClique + ' vezes e não gostou...')
-        alert('Não gosto que clique em mim!')
-    } else if(contadorDeClique <= 4){
-        console.log('O Robotron foi clicado ' + contadorDeClique + ' vezes e está prestes a te matar...')
-        alert('Estou ficando com raiva')
+const somar = document.querySelector('#somar')
+const subtrair = document.querySelector('#subtrair')
+const braco = document.querySelector('#braco')
+
+const controle = document.querySelectorAll('.controle-ajuste')
+
+controle.forEach((elemento) => {
+    elemento.addEventListener("click", (evento) => {
+        manipulaDados(evento.target.textContent)
+    })
+})
+
+function manipulaDados (op) {
+    if (op === "-") {
+        braco.value = parseInt(braco.value) - 1
     } else {
-        console.log('O Robotron foi clicado ' + contadorDeClique + ' vezes e você está morto na mão dele...')
-        alert('Eu vou destruir a humanidade!!!')
+        braco.value = parseInt(braco.value) + 1
     }
 }
-
-robotron.addEventListener('click', reclama)
